@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  .dark {
+    color-scheme: dark;
+  }
+}
+
+:root {
+  --radius: 0.875rem;
+  --background: oklch(0.99 0.005 240);
+  --foreground: oklch(0.2 0.03 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.2 0.03 250);
+  --primary: oklch(0.62 0.17 150);
+  --primary-foreground: oklch(0.99 0 0);
+  --secondary: oklch(0.96 0.02 240);
+  --secondary-foreground: oklch(0.25 0.04 250);
+  --muted: oklch(0.97 0.01 240);
+  --muted-foreground: oklch(0.5 0.02 250);
+  --accent: oklch(0.95 0.05 220);
+  --accent-foreground: oklch(0.25 0.04 250);
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.92 0.01 240);
+  --input: oklch(0.92 0.01 240);
+  --ring: oklch(0.62 0.17 150);
+
+  --eco-green: oklch(0.62 0.17 150);
+  --eco-green-soft: oklch(0.95 0.06 150);
+  --eco-blue: oklch(0.6 0.16 240);
+  --eco-blue-soft: oklch(0.95 0.05 240);
+  --eco-orange: oklch(0.72 0.16 55);
+  --eco-orange-soft: oklch(0.96 0.05 70);
+  --eco-purple: oklch(0.62 0.17 295);
+  --eco-purple-soft: oklch(0.95 0.05 295);
+  --eco-pink: oklch(0.7 0.18 5);
+
+  --gradient-hero: linear-gradient(135deg, oklch(0.97 0.03 200), oklch(0.96 0.05 150));
+  --shadow-card: 0 1px 3px oklch(0.2 0.03 250 / 0.04), 0 6px 20px oklch(0.2 0.03 250 / 0.04);
+
+  --chart-1: oklch(0.6 0.16 240);
+  --chart-2: oklch(0.62 0.17 150);
+  --chart-3: oklch(0.72 0.16 55);
+  --chart-4: oklch(0.62 0.17 295);
+  --chart-5: oklch(0.7 0.18 5);
+}
+
+@layer base {
+  * { border-color: var(--border); }
+  body { background-color: var(--background); color: var(--foreground); }
+}
+
