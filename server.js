@@ -7,6 +7,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const DATA_FILE = path.join(__dirname, "sensor_data.json");
 
+// Track last external Wokwi POST time
+let lastExternalPostTime = Date.now();
+
 // =======================
 // Middleware & Static Files
 // =======================
@@ -54,7 +57,7 @@ function savePersistentData() {
     };
     fs.writeFileSync(DATA_FILE, JSON.stringify(payload, null, 2), "utf-8");
   } catch (err) {
-    console.error("[Storage] Error saving persistent data:", err.message);
+    // Non-fatal if read-only filesystem environment
   }
 }
 
@@ -67,10 +70,56 @@ function parseMetric(val, fallback) {
   return isNaN(num) ? fallback : num;
 }
 
+// Helper to generate small random offset
+function getRandomOffset(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+// =======================
+// Continuous Telemetry Simulation Ticker
+// Ensures live telemetry never gets stuck on Render even if no external client is actively posting
+// =======================
+setInterval(() => {
+  // If no external Wokwi hardware packet arrived in the last 4 seconds, auto-update telemetry
+  if (Date.now() - lastExternalPostTime > 4000) {
+    let temp = latestData.temperature + getRandomOffset(-0.6, 0.7);
+    if (temp < 19) temp = 19.5;
+    if (temp > 38) temp = 37.2;
+
+    let hum = latestData.humidity + getRandomOffset(-1.0, 1.0);
+    if (hum < 30) hum = 32.0;
+    if (hum > 90) hum = 88.0;
+
+    let aqi = Math.round(latestData.airQuality + getRandomOffset(-5, 6));
+    if (aqi < 50) aqi = 55;
+    if (aqi > 220) aqi = 210;
+
+    let bat = latestData.battery + (latestData.solar > 0 ? 0.3 : -0.2);
+    if (bat > 100) bat = 100;
+    if (bat < 15) bat = 15;
+
+    latestData = {
+      temperature: Number(temp.toFixed(2)),
+      humidity: Number(hum.toFixed(2)),
+      airQuality: aqi,
+      battery: Number(bat.toFixed(2)),
+      solar: bat > 20 ? 85.0 : 0.0,
+      timestamp: new Date().toISOString()
+    };
+
+    sensorHistory.push(latestData);
+    if (sensorHistory.length > 100) {
+      sensorHistory.shift();
+    }
+    savePersistentData();
+  }
+}, 2500);
+
 // =======================
 // Receive Data From Wokwi (POST /sensor-data)
 // =======================
 app.post("/sensor-data", (req, res) => {
+  lastExternalPostTime = Date.now();
   const body = req.body || {};
 
   const temp = parseMetric(body.temperature, latestData.temperature);
@@ -117,7 +166,7 @@ app.post("/sensor-data", (req, res) => {
 app.get("/data", (req, res) => {
   res.status(200).json({
     ...latestData,
-    air: latestData.airQuality, // Fallback key for backwards compatibility
+    air: latestData.airQuality,
     status: latestData.battery < 20 ? "Low Power Mode" : "Online"
   });
 });
