@@ -1,25 +1,25 @@
 /*
 ==========================================================
-ECOSENSE IOT - TELEMETRY SIMULATOR (LOCAL & RENDER GLOBAL)
+ECOSENSE IOT - TELEMETRY SIMULATOR (GLOBAL RENDER SERVER)
 ==========================================================
 Usage:
-  node sim_wokwi.js          --> Sends telemetry to Localhost (http://localhost:3000/sensor-data)
-  node sim_wokwi.js --render --> Sends telemetry to Global Render (https://environmental-monitoring-system-c78z.onrender.com/sensor-data)
+  node sim_wokwi.js          --> Sends telemetry to Global Render (https://ecosense-iot.onrender.com/sensor-data)
+  node sim_wokwi.js --local  --> Sends telemetry to Localhost (http://localhost:3000/sensor-data)
 ==========================================================
 */
 
 const http = require('http');
 const https = require('https');
 
-const isRenderMode = process.argv.includes('--render');
+const isLocalMode = process.argv.includes('--local');
 
-const TARGET_URL = isRenderMode
-  ? 'https://environmental-monitoring-system-c78z.onrender.com/sensor-data'
-  : 'http://localhost:3000/sensor-data';
+const TARGET_URL = isLocalMode
+  ? 'http://localhost:3000/sensor-data'
+  : 'https://ecosense-iot.onrender.com/sensor-data';
 
-let temperature = 25.5;
-let humidity = 56.0;
-let batteryLevel = 82.0;
+let temperature = 26.5;
+let humidity = 54.0;
+let batteryLevel = 84.0;
 let solarCharging = true;
 
 function getRandomArbitrary(min, max) {
@@ -66,7 +66,7 @@ function sendTelemetry() {
     port: url.port || (url.protocol === 'https:' ? 443 : 80),
     path: url.pathname,
     method: 'POST',
-    rejectUnauthorized: false, // Bypass SSL certificate verification for simulation
+    rejectUnauthorized: false,
     headers: {
       'Content-Type': 'application/json',
       'Content-Length': Buffer.byteLength(payload)

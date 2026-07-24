@@ -34,13 +34,9 @@ const char* ssid = "Wokwi-GUEST";
 const char* password = "";
 
 // ======================================================
-// GLOBAL BACKEND API URL (RENDER DEPLOYMENT)
+// GLOBAL BACKEND API URL (LIVE RENDER DEPLOYMENT)
 // ======================================================
-// Global Render Backend Endpoint:
-String serverName = "https://environmental-monitoring-system-c78z.onrender.com/sensor-data";
-
-// Fallback for Localhost Testing (uncomment if testing locally):
-// String serverName = "http://localhost:3000/sensor-data";
+String serverName = "https://ecosense-iot.onrender.com/sensor-data";
 
 // ======================================================
 // DHT22 SENSOR & OLED CONFIGURATION
