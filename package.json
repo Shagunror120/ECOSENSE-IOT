@@ -1,0 +1,23 @@
+{
+  "name": "ecosense-iot",
+  "version": "1.0.0",
+  "description": "EcoSense IoT Backend Server",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "iot",
+    "esp32",
+    "wokwi",
+    "environment-monitoring",
+    "backend"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
