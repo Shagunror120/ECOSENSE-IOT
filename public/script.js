@@ -73,6 +73,38 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// Dynamic Weather Pill & Real-time Clock
+const headerWeatherIcon = document.getElementById("headerWeatherIcon");
+const headerWeatherText = document.getElementById("headerWeatherText");
+let currentLiveTemp = 26.5;
+let currentLiveHum = 54.0;
+
+function updateHeaderWeatherClock() {
+  const now = new Date();
+  const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  
+  let condition = "Sunny";
+  let icon = "☀️";
+
+  if (currentLiveHum > 75) {
+    condition = "Overcast";
+    icon = "⛅";
+  } else if (currentLiveTemp > 32) {
+    condition = "Warm & Clear";
+    icon = "☀️";
+  } else if (currentLiveHum > 60) {
+    condition = "Partly Cloudy";
+    icon = "🌤️";
+  }
+
+  if (headerWeatherIcon) headerWeatherIcon.innerText = icon;
+  if (headerWeatherText) headerWeatherText.innerText = `${currentLiveTemp.toFixed(1)}°C ${condition} • ${timeStr}`;
+}
+
+// Update clock every second
+setInterval(updateHeaderWeatherClock, 1000);
+updateHeaderWeatherClock();
+
 // DOM Metric References
 const homeTemp = document.getElementById("homeTemp");
 const homeHumidity = document.getElementById("homeHumidity");
@@ -168,6 +200,11 @@ async function fetchLiveData() {
 
     if (systemOnlineBadge) systemOnlineBadge.innerHTML = `<span class="dot-pulse"></span> ONLINE`;
     if (dashDeviceOnlinePill) dashDeviceOnlinePill.innerText = "Online";
+
+    // Dynamic Live Temperature Sync for Topbar Header Weather Pill
+    currentLiveTemp = data.temperature;
+    currentLiveHum = data.humidity;
+    updateHeaderWeatherClock();
 
     // Values
     if (homeTemp) homeTemp.innerText = data.temperature.toFixed(1);

@@ -82,17 +82,17 @@ function getRandomOffset(min, max) {
 setInterval(() => {
   // If no external Wokwi hardware packet arrived in the last 4 seconds, auto-update telemetry
   if (Date.now() - lastExternalPostTime > 4000) {
-    let temp = latestData.temperature + getRandomOffset(-0.6, 0.7);
-    if (temp < 19) temp = 19.5;
-    if (temp > 38) temp = 37.2;
+    let temp = latestData.temperature + getRandomOffset(-0.2, 0.25);
+    if (temp < 24.0) temp = 24.8;
+    if (temp > 28.8) temp = 28.2;
 
-    let hum = latestData.humidity + getRandomOffset(-1.0, 1.0);
-    if (hum < 30) hum = 32.0;
-    if (hum > 90) hum = 88.0;
+    let hum = latestData.humidity + getRandomOffset(-0.5, 0.5);
+    if (hum < 45) hum = 48.0;
+    if (hum > 68) hum = 65.0;
 
-    let aqi = Math.round(latestData.airQuality + getRandomOffset(-5, 6));
-    if (aqi < 50) aqi = 55;
-    if (aqi > 220) aqi = 210;
+    let aqi = Math.round(latestData.airQuality + getRandomOffset(-2, 3));
+    if (aqi < 40) aqi = 48;
+    if (aqi > 110) aqi = 95;
 
     let bat = latestData.battery + (latestData.solar > 0 ? 0.3 : -0.2);
     if (bat > 100) bat = 100;
