@@ -17,9 +17,9 @@ const TARGET_URL = isLocalMode
   ? 'http://localhost:3000/sensor-data'
   : 'https://ecosense-iot.onrender.com/sensor-data';
 
-let temperature = 26.2;
-let humidity = 54.0;
-let batteryLevel = 84.0;
+let temperature = 25.5;
+let humidity = 56.0;
+let batteryLevel = 82.0;
 let solarCharging = true;
 
 function getRandomArbitrary(min, max) {
@@ -27,26 +27,26 @@ function getRandomArbitrary(min, max) {
 }
 
 function sendTelemetry() {
-  temperature += getRandomArbitrary(-0.25, 0.3);
-  if (temperature < 24.0) temperature = 24.6;
-  if (temperature > 28.8) temperature = 28.2;
+  temperature += getRandomArbitrary(-0.7, 0.8);
+  if (temperature < 18) temperature = 18.5;
+  if (temperature > 38) temperature = 37.5;
 
-  humidity += getRandomArbitrary(-0.6, 0.6);
-  if (humidity < 45) humidity = 48.0;
-  if (humidity > 68) humidity = 65.0;
+  humidity += getRandomArbitrary(-1.1, 1.1);
+  if (humidity < 30) humidity = 32.0;
+  if (humidity > 90) humidity = 88.0;
 
-  const airQuality = Math.floor(getRandomArbitrary(55, 95));
+  const airQuality = Math.floor(getRandomArbitrary(60, 160));
 
   if (solarCharging) {
-    batteryLevel += 0.3;
+    batteryLevel += 0.4;
   } else {
-    batteryLevel -= 0.2;
+    batteryLevel -= 0.3;
   }
 
-  if (batteryLevel > 98) {
-    batteryLevel = 98;
+  if (batteryLevel > 100) {
+    batteryLevel = 100;
     solarCharging = false;
-  } else if (batteryLevel < 45) {
+  } else if (batteryLevel < 35) {
     solarCharging = true;
   }
 
