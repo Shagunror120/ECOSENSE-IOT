@@ -1,17 +1,45 @@
-// DOM Elements
-const navItems = document.querySelectorAll(".nav-item");
-const viewPanels = document.querySelectorAll(".view-panel");
-const topbarTitle = document.getElementById("topbarTitle");
-const topbarDesc = document.getElementById("topbarDesc");
+// Navigation Tabs
+const navLinks = document.querySelectorAll(".nav-link");
+const pageSections = document.querySelectorAll(".page-section");
 
-// Interactive Header Popovers & Dropdowns
+navLinks.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    navLinks.forEach(l => l.classList.remove("active"));
+    pageSections.forEach(s => s.classList.remove("active"));
+
+    link.classList.add("active");
+    const target = link.getAttribute("data-target");
+    document.getElementById(target).classList.add("active");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
+
+// Hero Buttons Action Handlers
+const heroOpenDashboardBtn = document.getElementById("heroOpenDashboardBtn");
+const heroViewLiveDataBtn = document.getElementById("heroViewLiveDataBtn");
+
+if (heroOpenDashboardBtn) {
+  heroOpenDashboardBtn.addEventListener("click", () => {
+    const link = document.querySelector('.nav-link[data-target="sectionOverview"]');
+    if (link) link.click();
+  });
+}
+
+if (heroViewLiveDataBtn) {
+  heroViewLiveDataBtn.addEventListener("click", () => {
+    const link = document.querySelector('.nav-link[data-target="sectionAnalytics"]');
+    if (link) link.click();
+  });
+}
+
+// Popovers & Dropdowns
 const teamUserBtn = document.getElementById("teamUserBtn");
 const teamDropdownMenu = document.getElementById("teamDropdownMenu");
 const headerBellBtn = document.getElementById("headerBellBtn");
 const notificationPopover = document.getElementById("notificationPopover");
 const popoverViewAlertsBtn = document.getElementById("popoverViewAlertsBtn");
 
-// Toggle Team Dropdown
 if (teamUserBtn && teamDropdownMenu) {
   teamUserBtn.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -20,7 +48,6 @@ if (teamUserBtn && teamDropdownMenu) {
   });
 }
 
-// Toggle Notification Bell Popover
 if (headerBellBtn && notificationPopover) {
   headerBellBtn.addEventListener("click", (e) => {
     e.stopPropagation();
@@ -29,17 +56,14 @@ if (headerBellBtn && notificationPopover) {
   });
 }
 
-// "View All Alerts" button inside Bell Popover
 if (popoverViewAlertsBtn) {
   popoverViewAlertsBtn.addEventListener("click", () => {
     if (notificationPopover) notificationPopover.classList.remove("open");
-    // Switch tab to Smart Alerts
-    const alertsNavItem = document.querySelector('.nav-item[data-tab="tabAlerts"]');
-    if (alertsNavItem) alertsNavItem.click();
+    const link = document.querySelector('.nav-link[data-target="sectionAlerts"]');
+    if (link) link.click();
   });
 }
 
-// Close Dropdowns on outside click
 document.addEventListener("click", (e) => {
   if (teamDropdownMenu && !teamDropdownMenu.contains(e.target) && !teamUserBtn.contains(e.target)) {
     teamDropdownMenu.classList.remove("open");
@@ -49,69 +73,32 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// Metrics Elements
-const valTemp = document.getElementById("valTemp");
-const valHumidity = document.getElementById("valHumidity");
-const valAir = document.getElementById("valAir");
-const valPres = document.getElementById("valPres");
-const valBattery = document.getElementById("valBattery");
-const valSolar = document.getElementById("valSolar");
+// DOM Metric References
+const homeTemp = document.getElementById("homeTemp");
+const homeHumidity = document.getElementById("homeHumidity");
+const homeAir = document.getElementById("homeAir");
+const homePres = document.getElementById("homePres");
+const homeBattery = document.getElementById("homeBattery");
+const homeSolar = document.getElementById("homeSolar");
+const homeLastUpdated = document.getElementById("homeLastUpdated");
 
-const tempState = document.getElementById("tempState");
-const humState = document.getElementById("humState");
-const airState = document.getElementById("airState");
-const batteryState = document.getElementById("batteryState");
-const solarState = document.getElementById("solarState");
-
-// Status Box Elements
-const connectionPill = document.getElementById("connectionPill");
-const statusText = document.getElementById("statusText");
-const powerModePill = document.getElementById("powerModePill");
-const deviceStatusPill = document.getElementById("deviceStatusPill");
-const packetCountVal = document.getElementById("packetCountVal");
-const lastUpdatedVal = document.getElementById("lastUpdatedVal");
-
-// Energy Tab Elements
 const energyBatteryVal = document.getElementById("energyBatteryVal");
 const energyBatteryFill = document.getElementById("energyBatteryFill");
 const energySolarVal = document.getElementById("energySolarVal");
 const energyModeVal = document.getElementById("energyModeVal");
 const energyModeSub = document.getElementById("energyModeSub");
 
-// Lists
 const overviewTableBody = document.getElementById("overviewTableBody");
-const overviewAlertsList = document.getElementById("overviewAlertsList");
+const dashPacketCount = document.getElementById("dashPacketCount");
+const dashLastUpdated = document.getElementById("dashLastUpdated");
+const dashDeviceOnlinePill = document.getElementById("dashDeviceOnlinePill");
+const systemOnlineBadge = document.getElementById("systemOnlineBadge");
+
 const alertsFullList = document.getElementById("alertsFullList");
 const bellPopoverAlertsList = document.getElementById("bellPopoverAlertsList");
+const homeQuickAlertsList = document.getElementById("homeQuickAlertsList");
 const bellBadgeCount = document.getElementById("bellBadgeCount");
-const navAlertCount = document.getElementById("navAlertCount");
-
-// Tab Navigation Switching
-navItems.forEach(item => {
-  item.addEventListener("click", (e) => {
-    e.preventDefault();
-    navItems.forEach(n => n.classList.remove("active"));
-    viewPanels.forEach(p => p.classList.remove("active"));
-
-    item.classList.add("active");
-    const targetId = item.getAttribute("data-tab");
-    document.getElementById(targetId).classList.add("active");
-
-    if (targetId === "tabOverview") {
-      topbarTitle.innerText = "System Overview";
-      topbarDesc.innerText = "Real-time summary of your battery-free environmental monitoring system.";
-    } else if (targetId === "tabAnalytics") {
-      topbarTitle.innerText = "Sensor Analytics";
-      topbarDesc.innerText = "Visualize historical trends and real-time insights of environmental data.";
-    } else if (targetId === "tabEnergy") {
-      topbarTitle.innerText = "Energy Monitoring";
-      topbarDesc.innerText = "Track energy harvesting, battery status, and power consumption in real-time.";
-    } else if (targetId === "tabAlerts") {
-      topbarTitle.innerText = "Smart Warning Center";
-      topbarDesc.innerText = "Real-time system alerts and automated threshold notifications.";
-    }
-  });
-});
+const navAlertBadge = document.getElementById("navAlertBadge");
 
 // Chart Setup
 Chart.defaults.color = '#64748b';
@@ -144,15 +131,13 @@ function makeAreaChart(ctx, label, color, min, max) {
   });
 }
 
-// Analytics Charts
-const analyticsChartTemp = makeAreaChart(document.getElementById("analyticsChartTemp").getContext("2d"), "Temp (°C)", "#2563eb", 15, 45);
-const analyticsChartHum = makeAreaChart(document.getElementById("analyticsChartHum").getContext("2d"), "Humidity (%)", "#16a34a", 20, 100);
-const analyticsChartAqi = makeAreaChart(document.getElementById("analyticsChartAqi").getContext("2d"), "AQI", "#ea580c", 0, 300);
-const analyticsChartPres = makeAreaChart(document.getElementById("analyticsChartPres").getContext("2d"), "Pressure", "#9333ea", 990, 1030);
+const chartTemp = makeAreaChart(document.getElementById("chartTemp").getContext("2d"), "Temp (°C)", "#2563eb", 15, 45);
+const chartHum = makeAreaChart(document.getElementById("chartHum").getContext("2d"), "Humidity (%)", "#16a34a", 20, 100);
+const chartAqi = makeAreaChart(document.getElementById("chartAqi").getContext("2d"), "AQI", "#ea580c", 0, 300);
+const chartPres = makeAreaChart(document.getElementById("chartPres").getContext("2d"), "Pressure", "#9333ea", 990, 1030);
 
-// Energy Charts
-const chartEnergyBattery = makeAreaChart(document.getElementById("chartEnergyBattery").getContext("2d"), "Battery %", "#16a34a", 0, 100);
-const chartSolarVsLoad = new Chart(document.getElementById("chartSolarVsLoad").getContext("2d"), {
+const chartBatteryTrend = makeAreaChart(document.getElementById("chartBatteryTrend").getContext("2d"), "Battery %", "#16a34a", 0, 100);
+const chartSolarVSLoad = new Chart(document.getElementById("chartSolarVSLoad").getContext("2d"), {
   type: 'line',
   data: {
     labels: [],
@@ -178,48 +163,37 @@ let isFirst = true;
 async function fetchLiveData() {
   try {
     const res = await fetch("/data");
-    if (!res.ok) throw new Error("Server Error");
+    if (!res.ok) throw new Error("Server error");
     const data = await res.json();
 
-    // Connection Status
-    connectionPill.classList.remove("offline");
-    statusText.innerText = "ESP32 Online";
-    deviceStatusPill.innerText = "Online";
+    if (systemOnlineBadge) systemOnlineBadge.innerHTML = `<span class="dot-pulse"></span> ONLINE`;
+    if (dashDeviceOnlinePill) dashDeviceOnlinePill.innerText = "Online";
 
-    // Metrics Strip
-    valTemp.innerText = data.temperature.toFixed(1);
-    valHumidity.innerText = data.humidity.toFixed(1);
+    // Values
+    if (homeTemp) homeTemp.innerText = data.temperature.toFixed(1);
+    if (homeHumidity) homeHumidity.innerText = data.humidity.toFixed(1);
     const aqi = data.airQuality || data.air;
-    valAir.innerText = aqi;
-    valBattery.innerText = data.battery.toFixed(1);
+    if (homeAir) homeAir.innerText = aqi;
+    if (homeBattery) homeBattery.innerText = data.battery.toFixed(1);
     const solarVal = data.solar || (data.battery > 20 ? 85.0 : 0.0);
-    valSolar.innerText = solarVal.toFixed(1);
+    if (homeSolar) homeSolar.innerText = solarVal.toFixed(1);
 
-    tempState.innerText = data.temperature > 35 ? "High Temp" : "Normal";
-    humState.innerText = "Normal";
-    airState.innerText = aqi < 100 ? "Good" : aqi < 150 ? "Moderate" : "Poor";
+    // Energy Values
+    if (energyBatteryVal) energyBatteryVal.innerText = `${data.battery.toFixed(1)} %`;
+    if (energyBatteryFill) energyBatteryFill.style.height = `${data.battery}%`;
+    if (energySolarVal) energySolarVal.innerText = `${solarVal.toFixed(1)} W`;
 
     if (data.battery < 20) {
-      batteryState.innerText = "Low Battery";
-      powerModePill.innerText = "🌙 Low Power Mode";
-      energyModeVal.innerText = "LOW POWER";
-      energyModeSub.innerText = "Deep Sleep Enabled";
+      if (energyModeVal) energyModeVal.innerText = "LOW POWER";
+      if (energyModeSub) energyModeSub.innerText = "Deep Sleep Mode";
     } else {
-      batteryState.innerText = "Charging";
-      powerModePill.innerText = "⚡ Normal Operation";
-      energyModeVal.innerText = "ACTIVE";
-      energyModeSub.innerText = "Normal Operation";
+      if (energyModeVal) energyModeVal.innerText = "ACTIVE";
+      if (energyModeSub) energyModeSub.innerText = "Normal Mode";
     }
 
-    solarState.innerText = solarVal > 0 ? "Active" : "Idle";
-
-    // Energy Tab
-    energyBatteryVal.innerText = `${data.battery.toFixed(1)} %`;
-    energyBatteryFill.style.height = `${data.battery}%`;
-    energySolarVal.innerText = `${solarVal.toFixed(1)} W`;
-
     const timeStr = data.timestamp ? new Date(data.timestamp).toLocaleTimeString() : new Date().toLocaleTimeString();
-    lastUpdatedVal.innerText = timeStr;
+    if (homeLastUpdated) homeLastUpdated.innerText = timeStr;
+    if (dashLastUpdated) dashLastUpdated.innerText = timeStr;
 
     if (isFirst) {
       await fetchHistory();
@@ -232,9 +206,8 @@ async function fetchLiveData() {
     fetchStatus();
   } catch (e) {
     console.error(e);
-    connectionPill.classList.add("offline");
-    statusText.innerText = "Server Disconnected";
-    deviceStatusPill.innerText = "Offline";
+    if (systemOnlineBadge) systemOnlineBadge.innerHTML = `OFFLINE`;
+    if (dashDeviceOnlinePill) dashDeviceOnlinePill.innerText = "Offline";
   }
 }
 
@@ -254,18 +227,18 @@ async function fetchHistory() {
     const bats = history.map(d => d.battery);
     const solars = history.map(d => d.solar || 85.0);
 
-    analyticsChartTemp.data.labels = labels; analyticsChartTemp.data.datasets[0].data = temps; analyticsChartTemp.update();
-    analyticsChartHum.data.labels = labels; analyticsChartHum.data.datasets[0].data = hums; analyticsChartHum.update();
-    analyticsChartAqi.data.labels = labels; analyticsChartAqi.data.datasets[0].data = aqis; analyticsChartAqi.update();
-    analyticsChartPres.data.labels = labels; analyticsChartPres.data.datasets[0].data = press; analyticsChartPres.update();
+    chartTemp.data.labels = labels; chartTemp.data.datasets[0].data = temps; chartTemp.update();
+    chartHum.data.labels = labels; chartHum.data.datasets[0].data = hums; chartHum.update();
+    chartAqi.data.labels = labels; chartAqi.data.datasets[0].data = aqis; chartAqi.update();
+    chartPres.data.labels = labels; chartPres.data.datasets[0].data = press; chartPres.update();
 
-    chartEnergyBattery.data.labels = labels; chartEnergyBattery.data.datasets[0].data = bats; chartEnergyBattery.update();
-    chartSolarVsLoad.data.labels = labels;
-    chartSolarVsLoad.data.datasets[0].data = solars;
-    chartSolarVsLoad.data.datasets[1].data = solars.map(s => s > 0 ? 1.6 : 1.2);
-    chartSolarVsLoad.update();
+    chartBatteryTrend.data.labels = labels; chartBatteryTrend.data.datasets[0].data = bats; chartBatteryTrend.update();
+    chartSolarVSLoad.data.labels = labels;
+    chartSolarVSLoad.data.datasets[0].data = solars;
+    chartSolarVSLoad.data.datasets[1].data = solars.map(s => s > 0 ? 1.6 : 1.2);
+    chartSolarVSLoad.update();
 
-    renderOverviewTable(history);
+    renderTable(history);
   } catch (e) {
     console.error(e);
   }
@@ -274,33 +247,32 @@ async function fetchHistory() {
 function appendPoint(timeStr, temp, hum, aqi, pres, bat, solar) {
   const maxP = 20;
 
-  [analyticsChartTemp, analyticsChartHum, analyticsChartAqi, analyticsChartPres, chartEnergyBattery].forEach(c => {
+  [chartTemp, chartHum, chartAqi, chartPres, chartBatteryTrend].forEach(c => {
     if (c.data.labels.length >= maxP) {
       c.data.labels.shift();
       c.data.datasets[0].data.shift();
     }
   });
 
-  if (chartSolarVsLoad.data.labels.length >= maxP) {
-    chartSolarVsLoad.data.labels.shift();
-    chartSolarVsLoad.data.datasets[0].data.shift();
-    chartSolarVsLoad.data.datasets[1].data.shift();
+  if (chartSolarVSLoad.data.labels.length >= maxP) {
+    chartSolarVSLoad.data.labels.shift();
+    chartSolarVSLoad.data.datasets[0].data.shift();
+    chartSolarVSLoad.data.datasets[1].data.shift();
   }
 
-  analyticsChartTemp.data.labels.push(timeStr); analyticsChartTemp.data.datasets[0].data.push(temp); analyticsChartTemp.update('none');
-  analyticsChartHum.data.labels.push(timeStr); analyticsChartHum.data.datasets[0].data.push(hum); analyticsChartHum.update('none');
-  analyticsChartAqi.data.labels.push(timeStr); analyticsChartAqi.data.datasets[0].data.push(aqi); analyticsChartAqi.update('none');
-  analyticsChartPres.data.labels.push(timeStr); analyticsChartPres.data.datasets[0].data.push(pres); analyticsChartPres.update('none');
+  chartTemp.data.labels.push(timeStr); chartTemp.data.datasets[0].data.push(temp); chartTemp.update('none');
+  chartHum.data.labels.push(timeStr); chartHum.data.datasets[0].data.push(hum); chartHum.update('none');
+  chartAqi.data.labels.push(timeStr); chartAqi.data.datasets[0].data.push(aqi); chartAqi.update('none');
+  chartPres.data.labels.push(timeStr); chartPres.data.datasets[0].data.push(pres); chartPres.update('none');
 
-  chartEnergyBattery.data.labels.push(timeStr); chartEnergyBattery.data.datasets[0].data.push(bat); chartEnergyBattery.update('none');
-  chartSolarVsLoad.data.labels.push(timeStr);
-  chartSolarVsLoad.data.datasets[0].data.push(solar);
-  chartSolarVsLoad.data.datasets[1].data.push(solar > 0 ? 1.6 : 1.2);
-  chartSolarVsLoad.update('none');
+  chartBatteryTrend.data.labels.push(timeStr); chartBatteryTrend.data.datasets[0].data.push(bat); chartBatteryTrend.update('none');
+  chartSolarVSLoad.data.labels.push(timeStr);
+  chartSolarVSLoad.data.datasets[0].data.push(solar);
+  chartSolarVSLoad.data.datasets[1].data.push(solar > 0 ? 1.6 : 1.2);
+  chartSolarVSLoad.update('none');
 }
 
-// Render Overview Table
-function renderOverviewTable(history) {
+function renderTable(history) {
   if (!overviewTableBody) return;
   const recent = history.slice(-5).reverse();
   overviewTableBody.innerHTML = recent.map(r => `
@@ -313,7 +285,6 @@ function renderOverviewTable(history) {
   `).join('');
 }
 
-// Fetch Alerts
 async function fetchAlerts() {
   try {
     const res = await fetch("/alerts");
@@ -322,46 +293,36 @@ async function fetchAlerts() {
     const alerts = data.alerts || [];
 
     if (bellBadgeCount) bellBadgeCount.innerText = alerts.length;
-    if (navAlertCount) navAlertCount.innerText = alerts.length;
+    if (navAlertBadge) navAlertBadge.innerText = alerts.length;
 
     const html = alerts.map(a => `
-      <div class="alert-row">
-        <div class="alert-ico ${a.type === 'danger' ? 'bg-orange-soft text-orange' : 'bg-green-soft text-green'}">${a.type === 'danger' ? '⚠️' : '✓'}</div>
-        <div class="alert-text">
-          <div class="t">${a.title}</div>
-          <div class="d">${a.detail}</div>
+      <div class="alert-row ${a.type || 'ok'}">
+        <div class="alert-ico">${a.type === 'danger' ? '⚠️' : '✓'}</div>
+        <div>
+          <div class="alert-title">${a.title}</div>
+          <div class="alert-desc">${a.detail}</div>
         </div>
-        <div class="alert-time">${a.time || new Date().toLocaleTimeString()}</div>
       </div>
     `).join('');
 
-    if (overviewAlertsList) overviewAlertsList.innerHTML = html;
     if (alertsFullList) alertsFullList.innerHTML = html;
     if (bellPopoverAlertsList) bellPopoverAlertsList.innerHTML = html;
+    if (homeQuickAlertsList) homeQuickAlertsList.innerHTML = html;
   } catch (e) {
     console.error(e);
   }
 }
 
-// Fetch Device Status
 async function fetchStatus() {
   try {
     const res = await fetch("/status");
     if (!res.ok) return;
     const data = await res.json();
-    if (packetCountVal) packetCountVal.innerText = data.totalPacketsReceived || 0;
+    if (dashPacketCount) dashPacketCount.innerText = data.totalPacketsReceived || 0;
   } catch (e) {
     console.error(e);
   }
 }
-
-// Filter alerts
-document.querySelectorAll(".flt-btn").forEach(b => {
-  b.addEventListener("click", () => {
-    document.querySelectorAll(".flt-btn").forEach(x => x.classList.remove("active"));
-    b.classList.add("active");
-  });
-});
 
 fetchLiveData();
 setInterval(fetchLiveData, 2500);

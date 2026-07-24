@@ -1,812 +1,812 @@
 {
   "latest": {
-    "temperature": 34.97,
-    "humidity": 45.83,
-    "airQuality": 120,
-    "battery": 84.1,
+    "temperature": 35.47,
+    "humidity": 40.77,
+    "airQuality": 102,
+    "battery": 40.3,
     "solar": 0,
-    "timestamp": "2026-07-24T13:28:55.287Z"
+    "timestamp": "2026-07-24T13:35:01.391Z"
   },
   "history": [
     {
-      "temperature": 36.25,
-      "humidity": 42.07,
-      "airQuality": 94,
-      "battery": 81.7,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:24:47.114Z"
+      "temperature": 35.49,
+      "humidity": 41.13,
+      "airQuality": 152,
+      "battery": 70,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:30:53.131Z"
     },
     {
-      "temperature": 35.6,
-      "humidity": 41.85,
-      "airQuality": 83,
-      "battery": 82.1,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:24:49.625Z"
-    },
-    {
-      "temperature": 36.15,
-      "humidity": 40.86,
-      "airQuality": 63,
-      "battery": 82.5,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:24:52.129Z"
-    },
-    {
-      "temperature": 36.77,
-      "humidity": 41.8,
-      "airQuality": 89,
-      "battery": 82.9,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:24:54.631Z"
-    },
-    {
-      "temperature": 37.32,
-      "humidity": 40.66,
-      "airQuality": 112,
-      "battery": 83.3,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:24:57.138Z"
-    },
-    {
-      "temperature": 36.65,
-      "humidity": 40.15,
-      "airQuality": 75,
-      "battery": 83.7,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:24:59.643Z"
-    },
-    {
-      "temperature": 36.76,
-      "humidity": 39.83,
-      "airQuality": 68,
-      "battery": 84.1,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:02.154Z"
-    },
-    {
-      "temperature": 36.52,
-      "humidity": 38.9,
+      "temperature": 35.13,
+      "humidity": 41.09,
       "airQuality": 62,
-      "battery": 84.5,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:04.658Z"
+      "battery": 69.7,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:30:55.642Z"
+    },
+    {
+      "temperature": 35.59,
+      "humidity": 40.24,
+      "airQuality": 123,
+      "battery": 69.4,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:30:58.148Z"
+    },
+    {
+      "temperature": 36.3,
+      "humidity": 40.7,
+      "airQuality": 118,
+      "battery": 69.1,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:00.656Z"
     },
     {
       "temperature": 35.94,
-      "humidity": 39.4,
-      "airQuality": 74,
-      "battery": 84.9,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:07.170Z"
+      "humidity": 39.76,
+      "airQuality": 117,
+      "battery": 68.8,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:03.163Z"
     },
     {
-      "temperature": 36.69,
-      "humidity": 38.88,
+      "temperature": 35.76,
+      "humidity": 39.7,
+      "airQuality": 70,
+      "battery": 68.5,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:05.667Z"
+    },
+    {
+      "temperature": 35.82,
+      "humidity": 40,
       "airQuality": 136,
-      "battery": 85.3,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:09.674Z"
+      "battery": 68.2,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:08.174Z"
     },
     {
-      "temperature": 36.67,
-      "humidity": 38.19,
-      "airQuality": 148,
-      "battery": 85.7,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:12.189Z"
+      "temperature": 36.34,
+      "humidity": 40.38,
+      "airQuality": 137,
+      "battery": 67.9,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:10.684Z"
     },
     {
-      "temperature": 36.5,
-      "humidity": 38.3,
-      "airQuality": 91,
-      "battery": 86.1,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:14.690Z"
-    },
-    {
-      "temperature": 37.17,
-      "humidity": 38.95,
-      "airQuality": 154,
-      "battery": 86.5,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:17.194Z"
-    },
-    {
-      "temperature": 37.84,
+      "temperature": 36.23,
       "humidity": 39.88,
-      "airQuality": 103,
-      "battery": 86.9,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:19.705Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 40.71,
-      "airQuality": 138,
-      "battery": 87.3,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:22.217Z"
-    },
-    {
-      "temperature": 37.57,
-      "humidity": 40.85,
-      "airQuality": 85,
-      "battery": 87.7,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:24.721Z"
-    },
-    {
-      "temperature": 37.36,
-      "humidity": 40.55,
-      "airQuality": 86,
-      "battery": 88.1,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:27.232Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 40.81,
-      "airQuality": 73,
-      "battery": 88.5,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:29.744Z"
-    },
-    {
-      "temperature": 37.41,
-      "humidity": 40.66,
-      "airQuality": 133,
-      "battery": 88.9,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:32.248Z"
-    },
-    {
-      "temperature": 37.96,
-      "humidity": 40.87,
-      "airQuality": 62,
-      "battery": 89.3,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:34.761Z"
-    },
-    {
-      "temperature": 37.98,
-      "humidity": 40.07,
-      "airQuality": 155,
-      "battery": 89.7,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:37.272Z"
-    },
-    {
-      "temperature": 37.36,
-      "humidity": 39.47,
-      "airQuality": 90,
-      "battery": 90.1,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:39.777Z"
-    },
-    {
-      "temperature": 37.99,
-      "humidity": 40.63,
-      "airQuality": 74,
-      "battery": 90.5,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:42.287Z"
-    },
-    {
-      "temperature": 37.65,
-      "humidity": 41.44,
-      "airQuality": 74,
-      "battery": 90.9,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:44.792Z"
-    },
-    {
-      "temperature": 37.17,
-      "humidity": 41.17,
-      "airQuality": 114,
-      "battery": 91.3,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:47.303Z"
-    },
-    {
-      "temperature": 37.94,
-      "humidity": 41.92,
-      "airQuality": 123,
-      "battery": 91.7,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:49.815Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 42.76,
-      "airQuality": 81,
-      "battery": 92.1,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:52.319Z"
-    },
-    {
-      "temperature": 37.62,
-      "humidity": 42.67,
-      "airQuality": 71,
-      "battery": 92.5,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:54.823Z"
-    },
-    {
-      "temperature": 37.92,
-      "humidity": 42.47,
-      "airQuality": 147,
-      "battery": 92.9,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:57.328Z"
-    },
-    {
-      "temperature": 37.9,
-      "humidity": 43.52,
-      "airQuality": 120,
-      "battery": 93.3,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:25:59.833Z"
-    },
-    {
-      "temperature": 37.66,
-      "humidity": 43.34,
-      "airQuality": 148,
-      "battery": 93.7,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:02.337Z"
-    },
-    {
-      "temperature": 37.83,
-      "humidity": 43.64,
-      "airQuality": 111,
-      "battery": 94.1,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:04.842Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 42.99,
-      "airQuality": 97,
-      "battery": 94.5,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:07.345Z"
-    },
-    {
-      "temperature": 36.8,
-      "humidity": 41.99,
-      "airQuality": 156,
-      "battery": 94.9,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:09.850Z"
-    },
-    {
-      "temperature": 37.19,
-      "humidity": 42.71,
-      "airQuality": 157,
-      "battery": 95.3,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:12.354Z"
-    },
-    {
-      "temperature": 37.6,
-      "humidity": 42.62,
-      "airQuality": 114,
-      "battery": 95.7,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:14.867Z"
-    },
-    {
-      "temperature": 37.63,
-      "humidity": 42.52,
-      "airQuality": 129,
-      "battery": 96.1,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:17.377Z"
-    },
-    {
-      "temperature": 36.89,
-      "humidity": 43.26,
-      "airQuality": 93,
-      "battery": 96.5,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:19.882Z"
-    },
-    {
-      "temperature": 37.28,
-      "humidity": 43.47,
-      "airQuality": 64,
-      "battery": 96.9,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:22.392Z"
-    },
-    {
-      "temperature": 37.28,
-      "humidity": 44.15,
-      "airQuality": 110,
-      "battery": 97.3,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:24.904Z"
-    },
-    {
-      "temperature": 37.25,
-      "humidity": 44.78,
-      "airQuality": 138,
-      "battery": 97.7,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:27.415Z"
-    },
-    {
-      "temperature": 37.03,
-      "humidity": 44.2,
-      "airQuality": 71,
-      "battery": 98.1,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:29.931Z"
-    },
-    {
-      "temperature": 36.62,
-      "humidity": 43.46,
-      "airQuality": 130,
-      "battery": 98.5,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:32.439Z"
-    },
-    {
-      "temperature": 37.24,
-      "humidity": 42.89,
-      "airQuality": 79,
-      "battery": 98.9,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:34.943Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 42.12,
-      "airQuality": 61,
-      "battery": 99.3,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:37.447Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 41.27,
-      "airQuality": 74,
-      "battery": 99.7,
-      "solar": 85,
-      "timestamp": "2026-07-24T13:26:39.948Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 41.27,
-      "airQuality": 97,
-      "battery": 100,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:26:42.449Z"
-    },
-    {
-      "temperature": 37.96,
-      "humidity": 42.25,
-      "airQuality": 118,
-      "battery": 99.7,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:26:44.952Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 42.89,
-      "airQuality": 119,
-      "battery": 99.4,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:26:47.458Z"
-    },
-    {
-      "temperature": 37.11,
-      "humidity": 43.74,
-      "airQuality": 124,
-      "battery": 99.1,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:26:49.961Z"
-    },
-    {
-      "temperature": 36.62,
-      "humidity": 44.46,
-      "airQuality": 122,
-      "battery": 98.8,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:26:52.473Z"
-    },
-    {
-      "temperature": 36.62,
-      "humidity": 44.16,
-      "airQuality": 116,
-      "battery": 98.5,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:26:54.988Z"
-    },
-    {
-      "temperature": 37.36,
-      "humidity": 44.67,
-      "airQuality": 128,
-      "battery": 98.2,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:26:57.489Z"
-    },
-    {
-      "temperature": 37.51,
-      "humidity": 44.32,
-      "airQuality": 147,
-      "battery": 97.9,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:26:59.992Z"
-    },
-    {
-      "temperature": 37.48,
-      "humidity": 43.51,
-      "airQuality": 84,
-      "battery": 97.6,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:02.505Z"
-    },
-    {
-      "temperature": 37.36,
-      "humidity": 44.55,
-      "airQuality": 103,
-      "battery": 97.3,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:05.011Z"
-    },
-    {
-      "temperature": 37.64,
-      "humidity": 44.79,
-      "airQuality": 132,
-      "battery": 97,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:07.513Z"
-    },
-    {
-      "temperature": 37.67,
-      "humidity": 44.08,
-      "airQuality": 158,
-      "battery": 96.7,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:10.024Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 43.19,
-      "airQuality": 121,
-      "battery": 96.4,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:12.529Z"
-    },
-    {
-      "temperature": 37.71,
-      "humidity": 43.7,
-      "airQuality": 85,
-      "battery": 96.1,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:15.030Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 44.13,
-      "airQuality": 95,
-      "battery": 95.8,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:17.533Z"
-    },
-    {
-      "temperature": 37.8,
-      "humidity": 43.73,
-      "airQuality": 103,
-      "battery": 95.5,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:20.046Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 44.18,
-      "airQuality": 152,
-      "battery": 95.2,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:22.548Z"
-    },
-    {
-      "temperature": 37,
-      "humidity": 44.85,
-      "airQuality": 60,
-      "battery": 94.9,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:25.049Z"
-    },
-    {
-      "temperature": 37.83,
-      "humidity": 45.17,
-      "airQuality": 108,
-      "battery": 94.6,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:27.556Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 44.3,
-      "airQuality": 78,
-      "battery": 94.3,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:30.067Z"
-    },
-    {
-      "temperature": 37.4,
-      "humidity": 43.22,
-      "airQuality": 148,
-      "battery": 94,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:32.579Z"
-    },
-    {
-      "temperature": 37.47,
-      "humidity": 43.56,
       "airQuality": 139,
-      "battery": 93.7,
+      "battery": 67.6,
       "solar": 0,
-      "timestamp": "2026-07-24T13:27:35.085Z"
-    },
-    {
-      "temperature": 36.96,
-      "humidity": 42.78,
-      "airQuality": 63,
-      "battery": 93.4,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:37.587Z"
-    },
-    {
-      "temperature": 36.59,
-      "humidity": 42.4,
-      "airQuality": 111,
-      "battery": 93.1,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:40.098Z"
+      "timestamp": "2026-07-24T13:31:13.193Z"
     },
     {
       "temperature": 36.07,
-      "humidity": 41.76,
-      "airQuality": 74,
-      "battery": 92.8,
+      "humidity": 39.8,
+      "airQuality": 149,
+      "battery": 67.3,
       "solar": 0,
-      "timestamp": "2026-07-24T13:27:42.600Z"
+      "timestamp": "2026-07-24T13:31:15.699Z"
     },
     {
-      "temperature": 36.21,
-      "humidity": 41.41,
-      "airQuality": 85,
-      "battery": 92.5,
+      "temperature": 35.51,
+      "humidity": 40.83,
+      "airQuality": 84,
+      "battery": 67,
       "solar": 0,
-      "timestamp": "2026-07-24T13:27:45.114Z"
+      "timestamp": "2026-07-24T13:31:18.200Z"
     },
     {
-      "temperature": 36.74,
+      "temperature": 34.87,
+      "humidity": 41.46,
+      "airQuality": 119,
+      "battery": 66.7,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:20.707Z"
+    },
+    {
+      "temperature": 34.39,
+      "humidity": 41.08,
+      "airQuality": 61,
+      "battery": 66.4,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:23.216Z"
+    },
+    {
+      "temperature": 34.85,
+      "humidity": 41.62,
+      "airQuality": 116,
+      "battery": 66.1,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:25.721Z"
+    },
+    {
+      "temperature": 34.28,
+      "humidity": 42.46,
+      "airQuality": 122,
+      "battery": 65.8,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:28.228Z"
+    },
+    {
+      "temperature": 33.67,
+      "humidity": 41.36,
+      "airQuality": 115,
+      "battery": 65.5,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:30.739Z"
+    },
+    {
+      "temperature": 33.79,
+      "humidity": 40.24,
+      "airQuality": 145,
+      "battery": 65.2,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:33.245Z"
+    },
+    {
+      "temperature": 33.53,
+      "humidity": 40.11,
+      "airQuality": 66,
+      "battery": 64.9,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:35.756Z"
+    },
+    {
+      "temperature": 33.29,
+      "humidity": 40.61,
+      "airQuality": 91,
+      "battery": 64.6,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:38.272Z"
+    },
+    {
+      "temperature": 33.57,
       "humidity": 41.49,
-      "airQuality": 150,
-      "battery": 92.2,
+      "airQuality": 152,
+      "battery": 64.3,
       "solar": 0,
-      "timestamp": "2026-07-24T13:27:47.619Z"
+      "timestamp": "2026-07-24T13:31:40.790Z"
+    },
+    {
+      "temperature": 33.38,
+      "humidity": 40.48,
+      "airQuality": 106,
+      "battery": 64,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:43.302Z"
+    },
+    {
+      "temperature": 34.12,
+      "humidity": 39.87,
+      "airQuality": 77,
+      "battery": 63.7,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:45.826Z"
+    },
+    {
+      "temperature": 34.61,
+      "humidity": 40.32,
+      "airQuality": 157,
+      "battery": 63.4,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:48.335Z"
+    },
+    {
+      "temperature": 35.08,
+      "humidity": 40.38,
+      "airQuality": 136,
+      "battery": 63.1,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:50.842Z"
+    },
+    {
+      "temperature": 34.71,
+      "humidity": 39.5,
+      "airQuality": 108,
+      "battery": 62.8,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:53.349Z"
+    },
+    {
+      "temperature": 34.85,
+      "humidity": 38.55,
+      "airQuality": 157,
+      "battery": 62.5,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:55.860Z"
+    },
+    {
+      "temperature": 34.23,
+      "humidity": 39.02,
+      "airQuality": 111,
+      "battery": 62.2,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:31:58.362Z"
+    },
+    {
+      "temperature": 35.11,
+      "humidity": 39.72,
+      "airQuality": 111,
+      "battery": 61.9,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:00.863Z"
+    },
+    {
+      "temperature": 35.16,
+      "humidity": 40.78,
+      "airQuality": 110,
+      "battery": 61.6,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:03.364Z"
+    },
+    {
+      "temperature": 34.98,
+      "humidity": 40.87,
+      "airQuality": 144,
+      "battery": 61.3,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:05.876Z"
+    },
+    {
+      "temperature": 35.38,
+      "humidity": 40.08,
+      "airQuality": 110,
+      "battery": 61,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:08.383Z"
+    },
+    {
+      "temperature": 34.99,
+      "humidity": 40.33,
+      "airQuality": 82,
+      "battery": 60.7,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:10.896Z"
+    },
+    {
+      "temperature": 35.39,
+      "humidity": 39.23,
+      "airQuality": 94,
+      "battery": 60.4,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:13.405Z"
+    },
+    {
+      "temperature": 35.38,
+      "humidity": 39.75,
+      "airQuality": 92,
+      "battery": 60.1,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:15.910Z"
+    },
+    {
+      "temperature": 36.13,
+      "humidity": 40.11,
+      "airQuality": 119,
+      "battery": 59.8,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:18.418Z"
+    },
+    {
+      "temperature": 36.39,
+      "humidity": 40,
+      "airQuality": 143,
+      "battery": 59.5,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:20.925Z"
+    },
+    {
+      "temperature": 36.87,
+      "humidity": 39.65,
+      "airQuality": 128,
+      "battery": 59.2,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:23.429Z"
+    },
+    {
+      "temperature": 37.23,
+      "humidity": 38.78,
+      "airQuality": 60,
+      "battery": 58.9,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:25.931Z"
     },
     {
       "temperature": 37.52,
-      "humidity": 42.15,
-      "airQuality": 128,
-      "battery": 91.9,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:50.123Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 41.38,
-      "airQuality": 126,
-      "battery": 91.6,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:52.627Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 41.97,
-      "airQuality": 156,
-      "battery": 91.3,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:55.128Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 41.09,
-      "airQuality": 63,
-      "battery": 91,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:27:57.636Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 41.98,
-      "airQuality": 157,
-      "battery": 90.7,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:00.149Z"
-    },
-    {
-      "temperature": 37.12,
-      "humidity": 41.36,
-      "airQuality": 105,
-      "battery": 90.4,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:02.658Z"
-    },
-    {
-      "temperature": 37.55,
-      "humidity": 42.37,
-      "airQuality": 144,
-      "battery": 90.1,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:05.161Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 42.55,
-      "airQuality": 104,
-      "battery": 89.8,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:07.671Z"
-    },
-    {
-      "temperature": 37.5,
-      "humidity": 41.57,
-      "airQuality": 88,
-      "battery": 89.5,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:10.175Z"
-    },
-    {
-      "temperature": 37.77,
-      "humidity": 41.79,
-      "airQuality": 112,
-      "battery": 89.2,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:12.677Z"
-    },
-    {
-      "temperature": 37.32,
-      "humidity": 42.3,
-      "airQuality": 126,
-      "battery": 88.9,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:15.181Z"
-    },
-    {
-      "temperature": 36.82,
-      "humidity": 42.39,
-      "airQuality": 88,
-      "battery": 88.6,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:17.695Z"
-    },
-    {
-      "temperature": 36.31,
-      "humidity": 42.2,
-      "airQuality": 77,
-      "battery": 88.3,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:20.197Z"
-    },
-    {
-      "temperature": 35.77,
-      "humidity": 42.21,
-      "airQuality": 101,
-      "battery": 88,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:22.705Z"
-    },
-    {
-      "temperature": 35.88,
-      "humidity": 42.07,
-      "airQuality": 74,
-      "battery": 87.7,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:25.216Z"
-    },
-    {
-      "temperature": 35.34,
-      "humidity": 42.86,
-      "airQuality": 145,
-      "battery": 87.4,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:27.717Z"
-    },
-    {
-      "temperature": 35.45,
-      "humidity": 43.9,
-      "airQuality": 110,
-      "battery": 87.1,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:30.223Z"
-    },
-    {
-      "temperature": 36.26,
-      "humidity": 44.75,
-      "airQuality": 62,
-      "battery": 86.8,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:32.738Z"
-    },
-    {
-      "temperature": 36.04,
-      "humidity": 44.77,
-      "airQuality": 105,
-      "battery": 86.5,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:35.241Z"
-    },
-    {
-      "temperature": 35.81,
-      "humidity": 43.85,
-      "airQuality": 123,
-      "battery": 86.2,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:37.743Z"
-    },
-    {
-      "temperature": 36.32,
-      "humidity": 44.72,
+      "humidity": 38.9,
       "airQuality": 147,
-      "battery": 85.9,
+      "battery": 58.6,
       "solar": 0,
-      "timestamp": "2026-07-24T13:28:40.245Z"
+      "timestamp": "2026-07-24T13:32:28.434Z"
     },
     {
-      "temperature": 35.81,
-      "humidity": 45.5,
+      "temperature": 37.61,
+      "humidity": 39.75,
+      "airQuality": 152,
+      "battery": 58.3,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:30.949Z"
+    },
+    {
+      "temperature": 37.6,
+      "humidity": 38.74,
+      "airQuality": 120,
+      "battery": 58,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:33.462Z"
+    },
+    {
+      "temperature": 37.75,
+      "humidity": 39.7,
+      "airQuality": 92,
+      "battery": 57.7,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:35.970Z"
+    },
+    {
+      "temperature": 37.31,
+      "humidity": 40.29,
+      "airQuality": 133,
+      "battery": 57.4,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:38.477Z"
+    },
+    {
+      "temperature": 37.5,
+      "humidity": 40.86,
       "airQuality": 94,
-      "battery": 85.6,
+      "battery": 57.1,
       "solar": 0,
-      "timestamp": "2026-07-24T13:28:42.751Z"
+      "timestamp": "2026-07-24T13:32:40.988Z"
     },
     {
-      "temperature": 35.34,
-      "humidity": 45.42,
-      "airQuality": 82,
-      "battery": 85.3,
+      "temperature": 36.97,
+      "humidity": 39.84,
+      "airQuality": 135,
+      "battery": 56.8,
       "solar": 0,
-      "timestamp": "2026-07-24T13:28:45.264Z"
+      "timestamp": "2026-07-24T13:32:43.493Z"
     },
     {
-      "temperature": 34.84,
-      "humidity": 46.59,
-      "airQuality": 119,
-      "battery": 85,
+      "temperature": 36.89,
+      "humidity": 39.01,
+      "airQuality": 151,
+      "battery": 56.5,
       "solar": 0,
-      "timestamp": "2026-07-24T13:28:47.773Z"
+      "timestamp": "2026-07-24T13:32:46.001Z"
+    },
+    {
+      "temperature": 36.63,
+      "humidity": 38.84,
+      "airQuality": 136,
+      "battery": 56.2,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:48.508Z"
+    },
+    {
+      "temperature": 36.97,
+      "humidity": 39.49,
+      "airQuality": 158,
+      "battery": 55.9,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:51.012Z"
+    },
+    {
+      "temperature": 36.97,
+      "humidity": 39.79,
+      "airQuality": 63,
+      "battery": 55.6,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:53.524Z"
+    },
+    {
+      "temperature": 37.59,
+      "humidity": 40.74,
+      "airQuality": 124,
+      "battery": 55.3,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:56.029Z"
+    },
+    {
+      "temperature": 37.91,
+      "humidity": 40.34,
+      "airQuality": 154,
+      "battery": 55,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:32:58.536Z"
+    },
+    {
+      "temperature": 37.61,
+      "humidity": 41.31,
+      "airQuality": 100,
+      "battery": 54.7,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:01.045Z"
+    },
+    {
+      "temperature": 36.96,
+      "humidity": 41.17,
+      "airQuality": 123,
+      "battery": 54.4,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:03.550Z"
+    },
+    {
+      "temperature": 36.88,
+      "humidity": 40.19,
+      "airQuality": 65,
+      "battery": 54.1,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:06.058Z"
+    },
+    {
+      "temperature": 37.13,
+      "humidity": 39.97,
+      "airQuality": 158,
+      "battery": 53.8,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:08.564Z"
+    },
+    {
+      "temperature": 37.52,
+      "humidity": 39.73,
+      "airQuality": 93,
+      "battery": 53.5,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:11.076Z"
+    },
+    {
+      "temperature": 37.03,
+      "humidity": 39.58,
+      "airQuality": 150,
+      "battery": 53.2,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:13.584Z"
+    },
+    {
+      "temperature": 36.41,
+      "humidity": 39.31,
+      "airQuality": 111,
+      "battery": 52.9,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:16.091Z"
+    },
+    {
+      "temperature": 36.74,
+      "humidity": 38.22,
+      "airQuality": 85,
+      "battery": 52.6,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:18.595Z"
+    },
+    {
+      "temperature": 37.52,
+      "humidity": 39.19,
+      "airQuality": 126,
+      "battery": 52.3,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:21.110Z"
+    },
+    {
+      "temperature": 37.47,
+      "humidity": 39.97,
+      "airQuality": 111,
+      "battery": 52,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:23.611Z"
+    },
+    {
+      "temperature": 37.76,
+      "humidity": 40.59,
+      "airQuality": 142,
+      "battery": 51.7,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:26.122Z"
+    },
+    {
+      "temperature": 37.5,
+      "humidity": 40.48,
+      "airQuality": 138,
+      "battery": 51.4,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:28.627Z"
+    },
+    {
+      "temperature": 36.78,
+      "humidity": 40.64,
+      "airQuality": 71,
+      "battery": 51.1,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:31.132Z"
+    },
+    {
+      "temperature": 35.99,
+      "humidity": 40.15,
+      "airQuality": 158,
+      "battery": 50.8,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:33.632Z"
+    },
+    {
+      "temperature": 36.2,
+      "humidity": 39.3,
+      "airQuality": 145,
+      "battery": 50.5,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:36.131Z"
+    },
+    {
+      "temperature": 36,
+      "humidity": 38.86,
+      "airQuality": 97,
+      "battery": 50.2,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:38.642Z"
+    },
+    {
+      "temperature": 36.48,
+      "humidity": 38.18,
+      "airQuality": 140,
+      "battery": 49.9,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:41.154Z"
+    },
+    {
+      "temperature": 36.24,
+      "humidity": 37.2,
+      "airQuality": 155,
+      "battery": 49.6,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:43.657Z"
+    },
+    {
+      "temperature": 36.41,
+      "humidity": 36.49,
+      "airQuality": 64,
+      "battery": 49.3,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:46.162Z"
+    },
+    {
+      "temperature": 36.28,
+      "humidity": 36.16,
+      "airQuality": 66,
+      "battery": 49,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:48.666Z"
+    },
+    {
+      "temperature": 36.48,
+      "humidity": 36.93,
+      "airQuality": 69,
+      "battery": 48.7,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:51.177Z"
+    },
+    {
+      "temperature": 37.13,
+      "humidity": 37.37,
+      "airQuality": 157,
+      "battery": 48.4,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:53.679Z"
+    },
+    {
+      "temperature": 37.61,
+      "humidity": 36.66,
+      "airQuality": 114,
+      "battery": 48.1,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:56.187Z"
+    },
+    {
+      "temperature": 37.36,
+      "humidity": 36.02,
+      "airQuality": 149,
+      "battery": 47.8,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:33:58.692Z"
+    },
+    {
+      "temperature": 37.2,
+      "humidity": 36.9,
+      "airQuality": 106,
+      "battery": 47.5,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:01.196Z"
+    },
+    {
+      "temperature": 36.63,
+      "humidity": 38.01,
+      "airQuality": 124,
+      "battery": 47.2,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:03.699Z"
+    },
+    {
+      "temperature": 36.06,
+      "humidity": 38.32,
+      "airQuality": 60,
+      "battery": 46.9,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:06.211Z"
+    },
+    {
+      "temperature": 35.26,
+      "humidity": 39.13,
+      "airQuality": 110,
+      "battery": 46.6,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:08.722Z"
+    },
+    {
+      "temperature": 35.27,
+      "humidity": 40.19,
+      "airQuality": 142,
+      "battery": 46.3,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:11.226Z"
+    },
+    {
+      "temperature": 35.15,
+      "humidity": 40.94,
+      "airQuality": 130,
+      "battery": 46,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:13.731Z"
     },
     {
       "temperature": 34.78,
-      "humidity": 45.99,
-      "airQuality": 105,
-      "battery": 84.7,
+      "humidity": 41.68,
+      "airQuality": 157,
+      "battery": 45.7,
       "solar": 0,
-      "timestamp": "2026-07-24T13:28:50.278Z"
-    },
-    {
-      "temperature": 34.24,
-      "humidity": 45.59,
-      "airQuality": 148,
-      "battery": 84.4,
-      "solar": 0,
-      "timestamp": "2026-07-24T13:28:52.783Z"
+      "timestamp": "2026-07-24T13:34:16.240Z"
     },
     {
       "temperature": 34.97,
-      "humidity": 45.83,
-      "airQuality": 120,
-      "battery": 84.1,
+      "humidity": 40.5,
+      "airQuality": 146,
+      "battery": 45.4,
       "solar": 0,
-      "timestamp": "2026-07-24T13:28:55.287Z"
+      "timestamp": "2026-07-24T13:34:18.752Z"
+    },
+    {
+      "temperature": 35.05,
+      "humidity": 39.56,
+      "airQuality": 143,
+      "battery": 45.1,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:21.262Z"
+    },
+    {
+      "temperature": 34.97,
+      "humidity": 39.83,
+      "airQuality": 68,
+      "battery": 44.8,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:23.769Z"
+    },
+    {
+      "temperature": 34.41,
+      "humidity": 40.92,
+      "airQuality": 108,
+      "battery": 44.5,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:26.280Z"
+    },
+    {
+      "temperature": 34.42,
+      "humidity": 41.99,
+      "airQuality": 73,
+      "battery": 44.2,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:28.796Z"
+    },
+    {
+      "temperature": 34.62,
+      "humidity": 40.96,
+      "airQuality": 83,
+      "battery": 43.9,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:31.304Z"
+    },
+    {
+      "temperature": 35.13,
+      "humidity": 39.99,
+      "airQuality": 71,
+      "battery": 43.6,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:33.811Z"
+    },
+    {
+      "temperature": 35.17,
+      "humidity": 39.3,
+      "airQuality": 111,
+      "battery": 43.3,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:36.318Z"
+    },
+    {
+      "temperature": 34.84,
+      "humidity": 40.12,
+      "airQuality": 148,
+      "battery": 43,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:38.820Z"
+    },
+    {
+      "temperature": 34.89,
+      "humidity": 39.1,
+      "airQuality": 114,
+      "battery": 42.7,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:41.331Z"
+    },
+    {
+      "temperature": 35.59,
+      "humidity": 39.58,
+      "airQuality": 92,
+      "battery": 42.4,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:43.837Z"
+    },
+    {
+      "temperature": 35.59,
+      "humidity": 40.59,
+      "airQuality": 148,
+      "battery": 42.1,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:46.348Z"
+    },
+    {
+      "temperature": 34.88,
+      "humidity": 40.28,
+      "airQuality": 137,
+      "battery": 41.8,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:48.859Z"
+    },
+    {
+      "temperature": 34.8,
+      "humidity": 40.04,
+      "airQuality": 94,
+      "battery": 41.5,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:51.364Z"
+    },
+    {
+      "temperature": 34.4,
+      "humidity": 40.48,
+      "airQuality": 146,
+      "battery": 41.2,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:53.868Z"
+    },
+    {
+      "temperature": 35.18,
+      "humidity": 40.43,
+      "airQuality": 111,
+      "battery": 40.9,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:56.370Z"
+    },
+    {
+      "temperature": 35.16,
+      "humidity": 40.8,
+      "airQuality": 80,
+      "battery": 40.6,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:34:58.884Z"
+    },
+    {
+      "temperature": 35.47,
+      "humidity": 40.77,
+      "airQuality": 102,
+      "battery": 40.3,
+      "solar": 0,
+      "timestamp": "2026-07-24T13:35:01.391Z"
     }
   ]
 }

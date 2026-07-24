@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EcoSense IoT — Smart Environmental Monitoring System</title>
+  <title>EcoSense IoT — Battery-Free Smart Environmental Monitoring</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -11,96 +11,59 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <div class="app-layout">
-    <!-- Sidebar Component -->
-    <aside class="sidebar">
-      <a href="#" class="sidebar-brand">
-        <div class="brand-badge">🌿</div>
-        <div>
-          <div class="brand-title">EcoSense IoT</div>
-          <div class="brand-sub">Battery-Free Monitoring</div>
-        </div>
-      </a>
-
-      <nav class="nav">
-        <a href="#" class="nav-item active" data-tab="tabOverview">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-          <span>System Overview</span>
+  <div class="site-container">
+    <!-- Top Navigation Header -->
+    <header class="top-nav">
+      <div class="nav-content">
+        <a href="#" class="brand-logo">
+          <span class="logo-icon">🌿</span>
+          <span class="logo-text">EcoSense IoT</span>
         </a>
-        <a href="#" class="nav-item" data-tab="tabAnalytics">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-          <span>Sensor Analytics</span>
-        </a>
-        <a href="#" class="nav-item" data-tab="tabEnergy">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
-          <span>Energy Monitor</span>
-        </a>
-        <a href="#" class="nav-item" data-tab="tabAlerts">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-          <span>Smart Alerts</span>
-          <span class="nav-alert-badge" id="navAlertCount">3</span>
-        </a>
-      </nav>
 
-      <div class="sidebar-status-box">
-        <div class="status-indicator-pill" id="connectionPill">
-          <span class="dot-pulse"></span>
-          <span id="statusText">ESP32 Online</span>
-        </div>
-        <div class="power-mode-pill" id="powerModePill">
-          ⚡ Normal Operation
-        </div>
-      </div>
-    </aside>
+        <nav class="main-nav-links">
+          <button class="nav-link active" data-target="sectionHome">Home</button>
+          <button class="nav-link" data-target="sectionOverview">Dashboard</button>
+          <button class="nav-link" data-target="sectionAnalytics">Analytics</button>
+          <button class="nav-link" data-target="sectionEnergy">Energy Monitor</button>
+          <button class="nav-link" data-target="sectionAlerts">Alerts <span class="badge-count" id="navAlertBadge">0</span></button>
+          <button class="nav-link" data-target="sectionAbout">About & Team</button>
+        </nav>
 
-    <!-- Main Workspace -->
-    <main class="main-workspace">
-      <!-- Header Topbar matching exact preset design -->
-      <header class="topbar">
-        <div>
-          <div class="welcome-sub">Welcome back, Team EcoSense! 👋</div>
-          <h1 class="topbar-title" id="topbarTitle">System Overview</h1>
-          <p class="topbar-desc" id="topbarDesc">Real-time summary of your battery-free environmental monitoring system.</p>
-        </div>
-
-        <div class="topbar-right">
-          <div class="weather-badge">
+        <div class="header-right-tools">
+          <div class="weather-pill">
             <span class="sun-icon">☀️</span>
-            <div>
-              <div class="weather-temp">25°C</div>
-              <div class="weather-label">Sunny</div>
-            </div>
+            <span class="temp-text">25°C Sunny</span>
           </div>
 
-          <!-- Notification Bell Button & Popover -->
+          <!-- Notification Bell -->
           <div class="popover-wrapper">
             <button class="bell-btn" id="headerBellBtn">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
               <span class="bell-badge" id="bellBadgeCount">3</span>
             </button>
 
-            <!-- Notifications Popover Menu -->
-            <div class="popover-menu notification-popover" id="notificationPopover">
+            <!-- Notifications Popover -->
+            <div class="popover-menu" id="notificationPopover">
               <div class="popover-head">
-                <div class="popover-title">Notifications & Alerts</div>
+                <span class="popover-title">Notifications & Alerts</span>
                 <span class="live-tag">LIVE</span>
               </div>
               <div class="popover-body" id="bellPopoverAlertsList">
-                <div class="alert-row">
-                  <div class="alert-ico bg-green-soft text-green">✓</div>
-                  <div class="alert-text">
-                    <div class="t">System Operational</div>
-                    <div class="d">Telemetry data stream active</div>
+                <div class="alert-row ok">
+                  <div class="alert-ico">✓</div>
+                  <div>
+                    <div class="alert-title">System Operational</div>
+                    <div class="alert-desc">Wokwi telemetry active</div>
                   </div>
                 </div>
               </div>
               <div class="popover-foot">
-                <button class="view-alerts-btn" id="popoverViewAlertsBtn">View All Warnings & Alerts →</button>
+                <button class="view-alerts-btn" id="popoverViewAlertsBtn">View All Warnings →</button>
               </div>
             </div>
           </div>
 
-          <!-- User Team Dropdown Wrapper -->
+          <!-- Team Dropdown -->
           <div class="dropdown-wrapper">
             <div class="user-btn" id="teamUserBtn">
               <div class="avatar">TE</div>
@@ -111,7 +74,7 @@
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
             </div>
 
-            <!-- Team Members Dropdown Menu -->
+            <!-- Team Members Dropdown Menu (Clean Names Only) -->
             <div class="dropdown-menu" id="teamDropdownMenu">
               <div class="dropdown-header">
                 <span class="dropdown-header-title">Team Members</span>
@@ -133,224 +96,331 @@
             </div>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
 
-      <!-- Metric Strip across all views -->
-      <section class="metric-strip">
-        <div class="metric-card">
-          <div class="metric-head">
-            <span class="metric-name">Temperature</span>
-            <div class="icon-wrap bg-blue-soft text-blue">🌡️</div>
+    <!-- App Body Content -->
+    <main class="app-body">
+      <!-- ======================================================== -->
+      <!-- SECTION 1: HOME LANDING PAGE -->
+      <!-- ======================================================== -->
+      <section class="page-section active" id="sectionHome">
+        <!-- Hero Banner -->
+        <div class="hero-grid">
+          <div class="hero-text-block">
+            <h1 class="hero-headline">
+              Battery-Free<br>
+              <span class="highlight-green">Smart Environmental</span><br>
+              <span class="highlight-blue">Monitoring System</span>
+            </h1>
+            <p class="hero-subtext">
+              An IoT-based system that monitors environmental parameters in real-time using energy harvesting technology and provides intelligent insights through a smart dashboard.
+            </p>
+            <div class="hero-buttons">
+              <button class="btn btn-primary" id="heroOpenDashboardBtn">Open Dashboard →</button>
+              <button class="btn btn-outline" id="heroViewLiveDataBtn">View Live Data</button>
+              <button class="btn btn-ghost" id="heroArchitectureBtn">System Architecture</button>
+            </div>
           </div>
-          <div class="metric-body">
-            <span class="metric-val" id="valTemp">--</span>
-            <span class="metric-unit">°C</span>
+
+          <!-- Hero Graphic Illustration -->
+          <div class="hero-illustration-card">
+            <div class="sun-sparkle">✨</div>
+            <div class="chip-hardware-wrap">
+              <div class="solar-panel-graphic">
+                <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+              </div>
+              <div class="esp32-chip-box">
+                <div class="chip-icon">💻</div>
+                <div class="chip-label">ESP32</div>
+              </div>
+            </div>
+            <div class="floating-pills">
+              <div class="pill bg-blue-soft text-blue">🌡️ Temperature</div>
+              <div class="pill bg-green-soft text-green">💧 Humidity</div>
+              <div class="pill bg-orange-soft text-orange">⏲️ Pressure</div>
+              <div class="pill bg-purple-soft text-purple">🍃 Air Quality</div>
+            </div>
           </div>
-          <div class="metric-foot text-green" id="tempState">Normal</div>
+
+          <!-- System Status Card -->
+          <div class="card status-overview-card">
+            <div class="card-head-flex">
+              <h3 class="card-title">System Status</h3>
+              <span class="online-status-badge" id="systemOnlineBadge">
+                <span class="dot-pulse"></span> ONLINE
+              </span>
+            </div>
+            <div class="status-info-list">
+              <div class="info-line"><span class="lbl">Device ID</span><span class="val font-semibold">ES-2024-001</span></div>
+              <div class="info-line"><span class="lbl">Backend Server</span><span class="val font-semibold text-green">Online</span></div>
+              <div class="info-line"><span class="lbl">Last Updated</span><span class="val" id="homeLastUpdated">--:--:--</span></div>
+              <div class="info-line"><span class="lbl">Connection</span><span class="val text-green font-semibold">📶 Excellent</span></div>
+            </div>
+          </div>
         </div>
 
-        <div class="metric-card">
-          <div class="metric-head">
-            <span class="metric-name">Humidity</span>
-            <div class="icon-wrap bg-green-soft text-green">💧</div>
+        <!-- 6 Metric Cards Strip -->
+        <div class="metrics-strip-6 mt-6">
+          <div class="card metric-box">
+            <div class="box-head">
+              <span class="lbl">Temperature</span>
+              <span class="icon bg-blue-soft text-blue">🌡️</span>
+            </div>
+            <div class="box-body">
+              <span class="val" id="homeTemp">--</span>
+              <span class="unit">°C</span>
+            </div>
+            <div class="box-foot text-green" id="homeTempState">Normal</div>
           </div>
-          <div class="metric-body">
-            <span class="metric-val" id="valHumidity">--</span>
-            <span class="metric-unit">%</span>
+
+          <div class="card metric-box">
+            <div class="box-head">
+              <span class="lbl">Humidity</span>
+              <span class="icon bg-green-soft text-green">💧</span>
+            </div>
+            <div class="box-body">
+              <span class="val" id="homeHumidity">--</span>
+              <span class="unit">%</span>
+            </div>
+            <div class="box-foot text-green" id="homeHumState">Normal</div>
           </div>
-          <div class="metric-foot text-green" id="humState">Normal</div>
+
+          <div class="card metric-box">
+            <div class="box-head">
+              <span class="lbl">Air Quality (AQI)</span>
+              <span class="icon bg-orange-soft text-orange">🍃</span>
+            </div>
+            <div class="box-body">
+              <span class="val" id="homeAir">--</span>
+              <span class="unit">AQI</span>
+            </div>
+            <div class="box-foot text-orange" id="homeAirState">Moderate</div>
+          </div>
+
+          <div class="card metric-box">
+            <div class="box-head">
+              <span class="lbl">Pressure</span>
+              <span class="icon bg-purple-soft text-purple">⏲️</span>
+            </div>
+            <div class="box-body">
+              <span class="val" id="homePres">1013</span>
+              <span class="unit">hPa</span>
+            </div>
+            <div class="box-foot text-green">Normal</div>
+          </div>
+
+          <div class="card metric-box">
+            <div class="box-head">
+              <span class="lbl">Battery Level</span>
+              <span class="icon bg-green-soft text-green">🔋</span>
+            </div>
+            <div class="box-body">
+              <span class="val" id="homeBattery">--</span>
+              <span class="unit">%</span>
+            </div>
+            <div class="box-foot text-green" id="homeBatteryState">Charging</div>
+          </div>
+
+          <div class="card metric-box">
+            <div class="box-head">
+              <span class="lbl">Solar Input</span>
+              <span class="icon bg-orange-soft text-orange">☀️</span>
+            </div>
+            <div class="box-body">
+              <span class="val" id="homeSolar">--</span>
+              <span class="unit">W</span>
+            </div>
+            <div class="box-foot text-green" id="homeSolarState">Active</div>
+          </div>
         </div>
 
-        <div class="metric-card">
-          <div class="metric-head">
-            <span class="metric-name">Air Quality (AQI)</span>
-            <div class="icon-wrap bg-orange-soft text-orange">🍃</div>
+        <!-- System Architecture & Flow Row -->
+        <div class="row-3-cards mt-6">
+          <div class="card panel">
+            <h3 class="panel-title text-green mb-2">⚡ Energy Harvesting Flow</h3>
+            <div class="flow-steps-compact">
+              <div class="step-box"><span class="ico">☀️</span><span>Solar Panel</span></div>
+              <div class="arr">➔</div>
+              <div class="step-box"><span class="ico">⚡</span><span>Charging Circuit</span></div>
+              <div class="arr">➔</div>
+              <div class="step-box"><span class="ico">🔋</span><span>Battery</span></div>
+              <div class="arr">➔</div>
+              <div class="step-box"><span class="ico">💻</span><span>ESP32</span></div>
+            </div>
           </div>
-          <div class="metric-body">
-            <span class="metric-val" id="valAir">--</span>
-            <span class="metric-unit">AQI</span>
+
+          <div class="card panel">
+            <h3 class="panel-title text-green mb-2">System Architecture</h3>
+            <div class="arch-flow-compact">
+              <div class="arch-box bg-green-soft text-green">Sensors</div>
+              <div class="arr">➔</div>
+              <div class="arch-box bg-blue-soft text-blue">ESP32</div>
+              <div class="arr">➔</div>
+              <div class="arch-box bg-purple-soft text-purple">Backend Server</div>
+              <div class="arr">➔</div>
+              <div class="arch-box bg-orange-soft text-orange">Dashboard</div>
+            </div>
           </div>
-          <div class="metric-foot text-orange" id="airState">Moderate</div>
+
+          <div class="card panel">
+            <h3 class="panel-title text-green mb-2">🔔 Quick Alerts</h3>
+            <div class="alert-list-mini" id="homeQuickAlertsList">
+              <div class="alert-item-mini ok">
+                <span class="chk">✓</span>
+                <span>All systems operational</span>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="metric-card">
-          <div class="metric-head">
-            <span class="metric-name">Pressure</span>
-            <div class="icon-wrap bg-purple-soft text-purple">⏲️</div>
+        <!-- Key Features Grid -->
+        <div class="section-block mt-8">
+          <h2 class="section-title">Key Features</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feat-icon bg-blue-soft text-blue">📡</div>
+              <div>
+                <div class="feat-title">Real-time Monitoring</div>
+                <div class="feat-desc">Live sensor data visualization</div>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-icon bg-orange-soft text-orange">🔔</div>
+              <div>
+                <div class="feat-title">Smart Alerts</div>
+                <div class="feat-desc">Threshold-based notifications</div>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-icon bg-green-soft text-green">🌿</div>
+              <div>
+                <div class="feat-title">Energy Harvesting</div>
+                <div class="feat-desc">Solar powered, battery-free operation</div>
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feat-icon bg-purple-soft text-purple">📊</div>
+              <div>
+                <div class="feat-title">Data Analytics</div>
+                <div class="feat-desc">Time-series trends & insights</div>
+              </div>
+            </div>
           </div>
-          <div class="metric-body">
-            <span class="metric-val" id="valPres">1013</span>
-            <span class="metric-unit">hPa</span>
-          </div>
-          <div class="metric-foot text-green">Normal</div>
         </div>
 
-        <div class="metric-card">
-          <div class="metric-head">
-            <span class="metric-name">Battery Level</span>
-            <div class="icon-wrap bg-green-soft text-green">🔋</div>
+        <!-- Team Section -->
+        <div class="section-block mt-8">
+          <h2 class="section-title">Our Team</h2>
+          <div class="team-grid-3">
+            <div class="team-card">
+              <div class="team-avatar-circle bg-blue-soft text-blue">AT</div>
+              <div class="team-card-name">Ananya Tripathi</div>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar-circle bg-orange-soft text-orange">SR</div>
+              <div class="team-card-name">Shagun Ror</div>
+            </div>
+            <div class="team-card">
+              <div class="team-avatar-circle bg-purple-soft text-purple">VS</div>
+              <div class="team-card-name">Vaishnavi Saxena</div>
+            </div>
           </div>
-          <div class="metric-body">
-            <span class="metric-val" id="valBattery">--</span>
-            <span class="metric-unit">%</span>
-          </div>
-          <div class="metric-foot text-green" id="batteryState">Charging</div>
-        </div>
-
-        <div class="metric-card">
-          <div class="metric-head">
-            <span class="metric-name">Solar Input</span>
-            <div class="icon-wrap bg-orange-soft text-orange">☀️</div>
-          </div>
-          <div class="metric-body">
-            <span class="metric-val" id="valSolar">--</span>
-            <span class="metric-unit">W</span>
-          </div>
-          <div class="metric-foot text-green" id="solarState">Active</div>
         </div>
       </section>
 
       <!-- ======================================================== -->
-      <!-- VIEW 1: SYSTEM OVERVIEW -->
+      <!-- SECTION 2: SYSTEM OVERVIEW (DASHBOARD) -->
       <!-- ======================================================== -->
-      <div class="view-panel active" id="tabOverview">
-        <section class="grid-2">
-          <!-- Flow diagram -->
-          <div class="panel">
-            <div class="panel-head">
-              <div>
-                <h3 class="panel-title">System Flow</h3>
-                <p class="panel-sub">Energy and data flow in your system</p>
-              </div>
-            </div>
-            <div class="flow-diagram-container">
-              <div class="flow-node">
-                <div class="flow-icon">☀️</div>
-                <div class="flow-lbl">Solar Energy</div>
-              </div>
-              <div class="flow-arrow">➔</div>
-              <div class="flow-node">
-                <div class="flow-icon">🔋</div>
-                <div class="flow-lbl">Storage</div>
-              </div>
-              <div class="flow-arrow">➔</div>
-              <div class="flow-node">
-                <div class="flow-icon">💻</div>
-                <div class="flow-lbl">ESP32</div>
-              </div>
-              <div class="flow-arrow">➔</div>
-              <div class="flow-node">
-                <div class="flow-icon">📡</div>
-                <div class="flow-lbl">Backend Server</div>
-              </div>
-            </div>
-            <div class="ops-bar">
-              <span class="check-icon">✓</span> All systems operational
-            </div>
+      <section class="page-section" id="sectionOverview">
+        <div class="section-header-bar">
+          <div>
+            <h2 class="section-title">System Overview</h2>
+            <p class="section-desc">Real-time telemetry overview from Wokwi ESP32 sensor node.</p>
           </div>
+        </div>
 
-          <!-- Device Status Card -->
-          <div class="panel">
-            <div class="panel-head">
-              <div>
-                <h3 class="panel-title">Device Status</h3>
-                <p class="panel-sub">Current status of your monitoring device</p>
-              </div>
-            </div>
-            <div class="device-status-box">
-              <div class="wifi-circle">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
-              </div>
-              <div class="device-info-rows">
-                <div class="info-row"><span class="k">Device ID</span><span class="v">ES-2024-001</span></div>
-                <div class="info-row"><span class="k">Status</span><span class="v"><span class="pill-online" id="deviceStatusPill">Online</span></span></div>
-                <div class="info-row"><span class="k">Packets Stored</span><span class="v" id="packetCountVal">0</span></div>
-                <div class="info-row"><span class="k">Last Updated</span><span class="v" id="lastUpdatedVal">--:--:--</span></div>
-                <div class="info-row"><span class="k">Signal Strength</span><span class="v ok-text">📶 Excellent</span></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Recent Readings & Recent Alerts -->
-        <section class="grid-2">
-          <div class="panel">
-            <div class="panel-head">
-              <div>
-                <h3 class="panel-title">Recent Readings</h3>
-                <p class="panel-sub">Latest telemetry stored in backend database</p>
-              </div>
-            </div>
-            <div class="table-wrap">
+        <div class="grid-2 mt-4">
+          <div class="card panel">
+            <div class="panel-head"><h3 class="panel-title">Recent Telemetry Readings</h3></div>
+            <div class="table-responsive">
               <table class="data-table">
                 <thead>
-                  <tr><th>Parameter</th><th>Value</th><th>Status</th><th style="text-align:right;">Time</th></tr>
+                  <tr><th>Parameter</th><th>Value</th><th>Status</th><th style="text-align:right;">Timestamp</th></tr>
                 </thead>
                 <tbody id="overviewTableBody">
-                  <tr><td colspan="4">Loading telemetry readings...</td></tr>
+                  <tr><td colspan="4">Loading telemetry...</td></tr>
                 </tbody>
               </table>
             </div>
           </div>
 
-          <div class="panel">
-            <div class="panel-head">
-              <div>
-                <h3 class="panel-title">Recent System Alerts</h3>
-                <p class="panel-sub">Automated alerts from backend</p>
-              </div>
-            </div>
-            <div class="alert-list" id="overviewAlertsList">
-              <div class="alert-row">
-                <div class="alert-ico bg-green-soft text-green">✓</div>
-                <div class="alert-text">
-                  <div class="t">All Systems Normal</div>
-                  <div class="d">Telemetry data stream active</div>
-                </div>
-                <div class="alert-time">Just now</div>
+          <div class="card panel">
+            <div class="panel-head"><h3 class="panel-title">Device Telemetry Status</h3></div>
+            <div class="device-status-box">
+              <div class="wifi-circle">📶</div>
+              <div class="device-rows">
+                <div class="row"><span class="k">Device ID</span><span class="v">ES-2024-001</span></div>
+                <div class="row"><span class="k">Status</span><span class="v"><span class="pill-online" id="dashDeviceOnlinePill">Online</span></span></div>
+                <div class="row"><span class="k">Packets Received</span><span class="v" id="dashPacketCount">0</span></div>
+                <div class="row"><span class="k">Last Updated</span><span class="v" id="dashLastUpdated">--:--:--</span></div>
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <!-- ======================================================== -->
-      <!-- VIEW 2: SENSOR ANALYTICS (DASHBOARD 1) -->
+      <!-- SECTION 3: SENSOR ANALYTICS (DASHBOARD 1) -->
       <!-- ======================================================== -->
-      <div class="view-panel" id="tabAnalytics">
-        <section class="grid-2">
-          <div class="panel">
+      <section class="page-section" id="sectionAnalytics">
+        <div class="section-header-bar">
+          <div>
+            <h2 class="section-title">Sensor Analytics</h2>
+            <p class="section-desc">Time-series trend charts for Temperature, Humidity, AQI, and Pressure.</p>
+          </div>
+        </div>
+
+        <div class="grid-2 mt-4">
+          <div class="card panel">
             <div class="panel-head"><h3 class="panel-title">Temperature History (°C)</h3></div>
-            <div class="chart-box-wrap"><canvas id="analyticsChartTemp"></canvas></div>
+            <div class="chart-container"><canvas id="chartTemp"></canvas></div>
           </div>
 
-          <div class="panel">
+          <div class="card panel">
             <div class="panel-head"><h3 class="panel-title">Humidity History (%)</h3></div>
-            <div class="chart-box-wrap"><canvas id="analyticsChartHum"></canvas></div>
+            <div class="chart-container"><canvas id="chartHum"></canvas></div>
           </div>
 
-          <div class="panel">
+          <div class="card panel">
             <div class="panel-head"><h3 class="panel-title">Air Quality Index (AQI)</h3></div>
-            <div class="chart-box-wrap"><canvas id="analyticsChartAqi"></canvas></div>
+            <div class="chart-container"><canvas id="chartAqi"></canvas></div>
           </div>
 
-          <div class="panel">
-            <div class="panel-head"><h3 class="panel-title">Atmospheric Pressure (hPa)</h3></div>
-            <div class="chart-box-wrap"><canvas id="analyticsChartPres"></canvas></div>
+          <div class="card panel">
+            <div class="panel-head"><h3 class="panel-title">Pressure History (hPa)</h3></div>
+            <div class="chart-container"><canvas id="chartPres"></canvas></div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <!-- ======================================================== -->
-      <!-- VIEW 3: ENERGY MONITORING (DASHBOARD 2) -->
+      <!-- SECTION 4: ENERGY MONITOR (DASHBOARD 2) -->
       <!-- ======================================================== -->
-      <div class="view-panel" id="tabEnergy">
-        <section class="grid-4">
-          <div class="panel flex-between">
+      <section class="page-section" id="sectionEnergy">
+        <div class="section-header-bar">
+          <div>
+            <h2 class="section-title">Energy Monitoring & Harvesting</h2>
+            <p class="section-desc">Solar input wattage, battery state, and energy flow lifecycle.</p>
+          </div>
+        </div>
+
+        <div class="grid-4 mt-4">
+          <div class="card panel flex-between">
             <div>
-              <div class="panel-sub font-semibold">Battery Level</div>
+              <div class="panel-sub">Battery Level</div>
               <div class="big-val" id="energyBatteryVal">78 %</div>
-              <div class="text-green font-semibold text-xs mt-1" id="energyChargingLabel">● Charging Active</div>
+              <div class="text-green font-semibold text-xs mt-1" id="energyChargingLabel">● Solar Harvesting Active</div>
             </div>
             <div class="battery-vertical">
               <div class="cap"></div>
@@ -358,80 +428,124 @@
             </div>
           </div>
 
-          <div class="panel flex-between">
+          <div class="card panel flex-between">
             <div>
-              <div class="panel-sub font-semibold">Solar Input</div>
+              <div class="panel-sub">Solar Input</div>
               <div class="big-val" id="energySolarVal">85 W</div>
-              <div class="text-green font-semibold text-xs mt-1">● Solar Harvesting</div>
+              <div class="text-green font-semibold text-xs mt-1">● Active Solar Power</div>
             </div>
             <div class="solar-grid-icon">
               <div></div><div></div><div></div><div></div>
             </div>
           </div>
 
-          <div class="panel flex-between">
+          <div class="card panel flex-between">
             <div>
-              <div class="panel-sub font-semibold">Power Consumption</div>
+              <div class="panel-sub">Power Consumption</div>
               <div class="big-val">1.6 W</div>
-              <div class="text-blue font-semibold text-xs mt-1">● Normal Operation</div>
+              <div class="text-blue font-semibold text-xs mt-1">● Low Drain Mode</div>
             </div>
             <div class="icon-circle bg-blue-soft text-blue">⚡</div>
           </div>
 
-          <div class="panel flex-between">
+          <div class="card panel flex-between">
             <div>
-              <div class="panel-sub font-semibold">System Mode</div>
+              <div class="panel-sub">System Mode</div>
               <div class="big-val" id="energyModeVal">ACTIVE</div>
               <div class="text-green font-semibold text-xs mt-1" id="energyModeSub">Normal Mode</div>
             </div>
             <div class="icon-circle bg-purple-soft text-purple">💻</div>
           </div>
-        </section>
+        </div>
 
-        <section class="grid-2 mt-6">
-          <div class="panel">
+        <div class="grid-2 mt-6">
+          <div class="card panel">
             <div class="panel-head"><h3 class="panel-title">Battery Level Trend (%)</h3></div>
-            <div class="chart-box-wrap"><canvas id="chartEnergyBattery"></canvas></div>
+            <div class="chart-container"><canvas id="chartBatteryTrend"></canvas></div>
           </div>
 
-          <div class="panel">
+          <div class="card panel">
             <div class="panel-head"><h3 class="panel-title">Solar Input vs Power Consumption (W)</h3></div>
-            <div class="chart-box-wrap"><canvas id="chartSolarVsLoad"></canvas></div>
+            <div class="chart-container"><canvas id="chartSolarVSLoad"></canvas></div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <!-- ======================================================== -->
-      <!-- VIEW 4: SMART ALERTS (DASHBOARD 3) -->
+      <!-- SECTION 5: SMART ALERTS (DASHBOARD 3) -->
       <!-- ======================================================== -->
-      <div class="view-panel" id="tabAlerts">
-        <div class="panel">
-          <div class="panel-head">
-            <div>
-              <h3 class="panel-title">Smart Alerts & Warning Center</h3>
-              <p class="panel-sub">Real-time threshold notifications generated by backend server</p>
-            </div>
-            <div class="filter-group">
-              <button class="flt-btn active" data-flt="all">All Alerts</button>
-              <button class="flt-btn" data-flt="warn">Warnings</button>
-              <button class="flt-btn" data-flt="danger">Critical</button>
-              <button class="flt-btn" data-flt="ok">Normal</button>
-            </div>
+      <section class="page-section" id="sectionAlerts">
+        <div class="section-header-bar">
+          <div>
+            <h2 class="section-title">Smart Warning Center</h2>
+            <p class="section-desc">Automated system warning alerts generated by backend server.</p>
           </div>
+          <div class="filter-btns">
+            <button class="flt-btn active" data-flt="all">All Alerts</button>
+            <button class="flt-btn" data-flt="warn">Warnings</button>
+            <button class="flt-btn" data-flt="danger">Critical</button>
+            <button class="flt-btn" data-flt="ok">Normal</button>
+          </div>
+        </div>
 
-          <div class="alert-list" id="alertsFullList">
-            <div class="alert-row">
-              <div class="alert-ico bg-green-soft text-green">✓</div>
-              <div class="alert-text">
-                <div class="t">System Operational</div>
-                <div class="d">Connected to Wokwi backend telemetries</div>
+        <div class="card panel mt-4">
+          <div class="alert-list-full" id="alertsFullList">
+            <div class="alert-row ok">
+              <div class="alert-ico">✓</div>
+              <div>
+                <div class="alert-title">System Operational</div>
+                <div class="alert-desc">Connected to Wokwi backend stream</div>
               </div>
-              <div class="alert-time">Just now</div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- ======================================================== -->
+      <!-- SECTION 6: ABOUT & TEAM -->
+      <!-- ======================================================== -->
+      <section class="page-section" id="sectionAbout">
+        <div class="section-header-bar">
+          <div>
+            <h2 class="section-title">About Project & Team</h2>
+            <p class="section-desc">EcoSense IoT Battery-Free Smart Environmental Monitoring System.</p>
+          </div>
+        </div>
+
+        <div class="grid-2 mt-4">
+          <div class="card panel">
+            <h3 class="panel-title text-green mb-2">About Project</h3>
+            <p class="text-sub leading-relaxed">
+              This project develops a sustainable, battery-free environmental monitoring system using energy harvesting techniques. It collects real-time telemetry on temperature, humidity, pressure, and air quality to aid smart environmental decisions.
+            </p>
+          </div>
+
+          <div class="card panel">
+            <h3 class="panel-title text-green mb-3">Project Team Members</h3>
+            <div class="team-list-clean">
+              <div class="team-member-clean-row">
+                <div class="avatar bg-blue-soft text-blue">AT</div>
+                <div class="name-bold">Ananya Tripathi</div>
+              </div>
+              <div class="team-member-clean-row">
+                <div class="avatar bg-orange-soft text-orange">SR</div>
+                <div class="name-bold">Shagun Ror</div>
+              </div>
+              <div class="team-member-clean-row">
+                <div class="avatar bg-purple-soft text-purple">VS</div>
+                <div class="name-bold">Vaishnavi Saxena</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div>© 2024 EcoSense IoT. All Rights Reserved.</div>
+      <div class="footer-sub">Powered by ESP32, Node.js, Express, Chart.js & Wokwi Telemetry</div>
+    </footer>
   </div>
 
   <script src="script.js"></script>
