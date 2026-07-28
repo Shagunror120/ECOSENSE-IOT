@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
+const https = require("https");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -57,7 +58,7 @@ function savePersistentData() {
     };
     fs.writeFileSync(DATA_FILE, JSON.stringify(payload, null, 2), "utf-8");
   } catch (err) {
-    // Non-fatal if read-only filesystem environment
+    // Non-fatal if read-only environment
   }
 }
 
@@ -77,7 +78,7 @@ function getRandomOffset(min, max) {
 
 // =======================
 // Continuous Telemetry Simulation Ticker
-// Ensures live telemetry never gets stuck on Render even if no external client is actively posting
+// Ensures live telemetry updates non-stop 24/7 on Render
 // =======================
 setInterval(() => {
   // If no external Wokwi hardware packet arrived in the last 4 seconds, auto-update telemetry
@@ -114,6 +115,18 @@ setInterval(() => {
     savePersistentData();
   }
 }, 2500);
+
+// =======================
+// 24/7 Keep-Alive Self-Ping Heartbeat
+// Prevents Render from sleeping by sending a GET ping every 4 minutes
+// =======================
+setInterval(() => {
+  https.get("https://ecosense-iot.onrender.com/data", { rejectUnauthorized: false }, (res) => {
+    // Keep-alive heartbeat success
+  }).on("error", () => {
+    // Ignore network noise
+  });
+}, 4 * 60 * 1000); // 4 minutes
 
 // =======================
 // Receive Data From Wokwi (POST /sensor-data)
