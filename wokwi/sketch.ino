@@ -10,7 +10,7 @@ FEATURES:
 ✅ Simulated Air Quality & Energy Harvesting Logic
 ✅ WiFi Connection
 ✅ HTTP REST Telemetry Posting to Global Render Backend Server
-✅ Wokwi Simulator Compatible
+✅ Wokwi Simulator Compatible (SSL/TLS Secure Client Supported)
 
 ==========================================================
 WOKWI CONNECTIONS
@@ -21,6 +21,7 @@ OLED:  VCC -> 3.3V | GND -> GND | SDA -> GPIO 21 | SCL -> GPIO 22
 */
 
 #include <WiFi.h>
+#include <WiFiClientSecure.h>
 #include <HTTPClient.h>
 #include <Wire.h>
 #include "DHTesp.h"
@@ -129,10 +130,13 @@ void loop() {
   display.println(deepSleepMode ? "LOW POWER MODE" : "NORMAL MODE");
   display.display();
 
-  // Send Telemetry Data to Global Render Server
+  // Send Telemetry Data to Global Render Server (Secure TLS Client)
   if(WiFi.status() == WL_CONNECTED) {
+    WiFiClientSecure client;
+    client.setInsecure(); // Bypass SSL cert verification in Wokwi simulator
+
     HTTPClient http;
-    http.begin(serverName);
+    http.begin(client, serverName);
     http.addHeader("Content-Type", "application/json");
 
     String jsonData = "{";
